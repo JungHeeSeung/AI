@@ -45,6 +45,12 @@
     <ClCompile Include="..\Common\Time\CrudeTimer.cpp">
       <Filter>misc</Filter>
     </ClCompile>
+    <ClCompile Include="Guest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GusetOwnedState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseGameEntity.h">
@@ -94,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="..\Common\misc\utils.h">
       <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Guest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GusetOwnedState.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

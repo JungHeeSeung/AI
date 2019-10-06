@@ -172,6 +172,8 @@ void CookStew::Enter(MinersWife* wife)
                               Msg_StewReady,        //msg
                               NO_ADDITIONAL_INFO); 
 
+
+
     wife->SetCooking(true);
   }
 }
@@ -210,6 +212,14 @@ bool CookStew::OnMessage(MinersWife* wife, const Telegram& msg)
                                 ent_Miner_Bob,
                                 Msg_StewReady,
                                 NO_ADDITIONAL_INFO);
+
+	  cout << "\n";
+	  // 나도 먹을 수 있게끔 메시지를 알려준다
+	  Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY,
+		  wife->ID(),
+		  ent_HeeSeung,
+		  Msg_StewReady,
+		  NO_ADDITIONAL_INFO);
 
       wife->SetCooking(false);
 

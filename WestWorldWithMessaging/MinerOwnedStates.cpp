@@ -160,7 +160,15 @@ void GoHomeAndSleepTilRested::Enter(Miner* pMiner)
                               pMiner->ID(),        //ID of sender
                               ent_Elsa,            //ID of recipient
                               Msg_HiHoneyImHome,   //the message
-                              NO_ADDITIONAL_INFO);    
+                              NO_ADDITIONAL_INFO);   
+
+	cout << "\n";
+	// 나에게 집에 왔음을 알린다
+	Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+		pMiner->ID(),        //ID of sender
+		ent_HeeSeung,            //ID of recipient
+		Msg_HiHoneyImHome,   //the message
+		NO_ADDITIONAL_INFO);
   }
 }
 
